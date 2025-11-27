@@ -10068,9 +10068,61 @@ split-lines {
     overflow: hidden
 }
 
-/*# sourceMappingURL=/cdn/shop/t/4/assets/theme.css.map?v=36026266534470531901729761530 */
+
+/* TEXT AFTER THREE IMAGES ANIMATIONS */
+
+.js-watches-heading-word,
+.js-watches-subline {
+  opacity: 0;
+  transform: none !important;
+}
+.watches--carbone.show-text .js-watches-heading-word,
+.watches--carbone.show-text .js-watches-subline {
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
 
 
+/* WOMEN IMAGE SHADOW */
+
+.luxury-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-image::before,
+.luxury-image::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Top shadow */
+.luxury-image::before {
+  top: 0;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+/* Bottom shadow */
+.luxury-image::after {
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.65), rgba(0,0,0,0));
+}
+
+.luxury-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+  
 
 /* GSAP FEATURE*/
 
+/* SPACING */
+#button-spacing{
+    padding: 10vw 48px !important;
+}
